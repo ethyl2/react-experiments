@@ -41,19 +41,53 @@ function Navbar() {
 function MainContent() {
     return (
         <main>
-            <section>
-                <h1>On the First Day of Christmas</h1>
-                <p>My True Love Gave to Me...</p>
-                <p>A complete mystery!</p>
+            <section style={{textAlign :'center'}}>
+                <h1>React Experiments</h1>
+                <p>A place to save my code as I go through a Scrimba tutorial and try things out</p>
+                <p >While Vue.js is probably my favorite, React is pretty neat, too.</p>
             </section>
         </main>
     )
 }
 
+
+function Page() {
+    return (
+        <div>
+        <h2>My awesome website in React</h2>
+        <h3>Reasons I love React</h3>
+        <ol>
+            <li>It's composable</li>
+            <li>It's declarative</li>
+            <li>It's a hireable skill</li>
+            <li>It's actively maintained by skilled people</li>
+        </ol>
+    </div>
+    )
+} 
+
+// Example to show how JSX returns an object
+const page = (
+    <div>
+    <h1>My awesome website in React</h1>
+    <h3>Reasons I love React</h3>
+    <ol>
+        <li>It's composable</li>
+        <li>It's declarative</li>
+        <li>It's a hireable skill</li>
+        <li>It's actively maintained by skilled people</li>
+    </ol>
+</div>
+)
+
+console.log(JSON.stringify(page))
+
 ReactDOM.render(
     <div>
         <Navbar />
         <MainContent />
+        <Page />
     </div>,
     document.getElementById("root")
 )
+
